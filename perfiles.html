@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfiles de Lenguas - Voces Indígenas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-feather-alt"></i>
+        </div>
+        <div class="logo-text">
+          <h1>Voces Indígenas</h1>
+          <p>Investigación para la Preservación Lingüística</p>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="perfiles.html" class="active"><i class="fas fa-globe"></i> Perfiles de Lenguas</a></li>
+        <li><a href="crisis.html"><i class="fas fa-exclamation-triangle"></i> Contexto de Crisis</a></li>
+        <li><a href="bibliografia.html"><i class="fas fa-book"></i> Bibliografía</a></li>
+      </ul>
+      <a href="#" class="btn-updates">Más Información</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-icon">
+      <i class="fas fa-globe"></i>
+    </div>
+    <h1 class="page-title">
+      Perfiles de Lenguas
+      <span>Indígenas</span>
+    </h1>
+    <p class="page-description">
+      Explora la documentación integral de seis lenguas indígenas mexicanas en peligro de extinción. 
+      Cada perfil combina investigación académica con contexto cultural, preservando el patrimonio 
+      lingüístico y creando conciencia sobre la necesidad urgente de preservación.
+    </p>
+    <div class="page-features">
+      <div class="page-feature">
+        <i class="fas fa-microscope"></i>
+        Investigación Académica
+      </div>
+      <div class="page-feature">
+        <i class="fas fa-headphones"></i>
+        Documentación de Audio
+      </div>
+      <div class="page-feature">
+        <i class="fas fa-heart"></i>
+        Contexto Cultural
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-section" style="padding: 2rem;">
+    <div class="stats-container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="stat-number">6</div>
+          <div class="stat-label">Lenguas Documentadas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-number">~370,000</div>
+          <div class="stat-label">Total de Hablantes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Críticamente Amenazadas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="stat-number">Nov 2025</div>
+          <div class="stat-label">Última Actualización</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="filters-section">
+    <div class="filters-container">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar por nombre de lengua, nombre nativo o región..." id="searchInput">
+      </div>
+      <div class="filter-controls">
+        <div class="filter-label">
+          <i class="fas fa-filter"></i>
+          Filtrar y Ordenar
+        </div>
+        <div class="filter-select">
+          <label>Región</label>
+          <select id="regionFilter">
+            <option value="">Todas las Regiones</option>
+            <option value="oaxaca">Oaxaca</option>
+            <option value="tabasco">Tabasco</option>
+            <option value="baja-california">Baja California</option>
+          </select>
+        </div>
+        <div class="filter-select">
+          <label>Nivel de Peligro</label>
+          <select id="endangermentFilter">
+            <option value="">Todos los Niveles</option>
+            <option value="critico">Crítico</option>
+            <option value="severamente">Severamente Amenazado</option>
+            <option value="en-peligro">En Peligro</option>
+          </select>
+        </div>
+        <div class="filter-select">
+          <label>Ordenar Por</label>
+          <select id="sortBy">
+            <option value="nombre">Nombre (A-Z)</option>
+            <option value="hablantes-asc">Menos Hablantes</option>
+            <option value="hablantes-desc">Más Hablantes</option>
+            <option value="peligro">Nivel de Peligro</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Grid -->
+  <section class="featured-section">
+    <div class="featured-container">
+      <p style="color: var(--text-gray); margin-bottom: 2rem;">6 Lenguas Encontradas</p>
+      <div class="languages-grid" id="languagesGrid">
+        
+        <!-- Ayapaneco -->
+        <div class="language-card" id="ayapaneco" data-region="tabasco" data-endangerment="critico" data-speakers="2" data-name="Ayapaneco">
+          <div class="card-image">
+            <img src="{css,js,images,assets}/ayapaneco.jpg" alt="Ayapaneco">
+            <div class="card-badge">
+              <span class="status-badge critical">Críticamente Amenazado</span>
+            </div>
+            <div class="card-speakers">2 hablantes</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Ayapaneco</h3>
+            <div class="card-native">Nuumte Oote - "La lengua verdadera"</div>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Tabasco - Ranchería de Ayapa, Jalpa de Méndez
+            </div>
+            <p class="card-description">
+              El ayapaneco pertenece a la familia mixe-zoque, una de las más antiguas de Mesoamérica. 
+              Teorías arqueológicas sugieren que los pueblos mixe-zoques fueron creadores de la cultura 
+              olmeca, considerada la "cultura madre" de la civilización mesoamericana. Los últimos 
+              hablantes fluidos, Manuel Segovia Jiménez y Isidro Velázquez Méndez, fallecieron en 2021 
+              y 2011 respectivamente.
+            </p>
+            <p class="card-description">
+              <strong>Características únicas:</strong> Posee distinción de género en el habla donde 
+              ciertas palabras varían según si las pronuncia un hombre o una mujer. Esta característica 
+              refleja una cosmovisión que integra el género como categoría epistemológica fundamental.
+            </p>
+            <p class="card-description">
+              <strong>Conocimiento perdido:</strong> Conocimiento sobre ecología de selva tropical húmeda, 
+              técnicas agrícolas tradicionales adaptadas a Tabasco, cosmovisión zoque sobre la relación 
+              humano-naturaleza con el concepto de kojama, y medicina tradicional con plantas de la región.
+            </p>
+            <div class="card-features">
+              <h4>Causas de la Extinción:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Políticas de castellanización del siglo XX</li>
+                <li><i class="fas fa-check"></i> Marginación económica y social</li>
+                <li><i class="fas fa-check"></i> Vergüenza cultural internalizada</li>
+              </ul>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 1rem;">
+              Actualizado Nov 2025
+            </p>
+            <div class="card-actions">
+              <a href="#" class="btn-learn">Explorar Perfil <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chontal de Oaxaca -->
+        <div class="language-card" id="chontal" data-region="oaxaca" data-endangerment="severamente" data-speakers="4000" data-name="Chontal">
+          <div class="card-image">
+            <img src="{css,js,images,assets}/Chontales-de-Oaxaca.jpg" alt="Chontal">
+            <div class="card-badge">
+              <span class="status-badge severely">Definitivamente Amenazado</span>
+            </div>
+            <div class="card-speakers">3,000-5,000 hablantes</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Chontal de Oaxaca</h3>
+            <div class="card-native">Slijuala Xanuc' - "Palabra de montaña"</div>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Oaxaca - Sierra Sur (San Pedro Huamelula, Santiago Astata, Santa María Ecatepec)
+            </div>
+            <p class="card-description">
+              El chontal de Oaxaca es una lengua lingüísticamente aislada sin relación demostrada con 
+              otras familias lingüísticas de México. Esta condición la hace excepcionalmente valiosa 
+              para entender la prehistoria lingüística de Mesoamérica, pero también extremadamente 
+              vulnerable: cuando desaparezca, no quedará ninguna lengua relacionada.
+            </p>
+            <p class="card-description">
+              <strong>Presión doble:</strong> Enfrenta presión del español (sistema educativo, medios, 
+              economía) y también del zapoteco, lengua más prestigiosa en Oaxaca. El chontal ocupa el 
+              escalón más bajo en esta jerarquía lingüística compleja.
+            </p>
+            <p class="card-description">
+              <strong>Conocimiento en riesgo:</strong> Agricultura de sierra sur, manejo de laderas, 
+              conocimiento sobre biodiversidad de región montañosa, y un sistema único de pensamiento 
+              cuya pérdida sería irreparable para la lingüística comparativa.
+            </p>
+            <div class="card-features">
+              <h4>Situación Actual:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Muchos hablantes son semi-hablantes</li>
+                <li><i class="fas fa-check"></i> Invisibilidad incluso en Oaxaca</li>
+                <li><i class="fas fa-check"></i> Marginación frente a lenguas más grandes</li>
+              </ul>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 1rem;">
+              Actualizado Nov 2025
+            </p>
+            <div class="card-actions">
+              <a href="#" class="btn-learn">Explorar Perfil <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Huave -->
+        <div class="language-card" id="huave" data-region="oaxaca" data-endangerment="severamente" data-speakers="15000" data-name="Huave">
+          <div class="card-image">
+            <img src="{css,js,images,assets}/huave.jpg" alt="Huave">
+            <div class="card-badge">
+              <span class="status-badge severely">Severamente Amenazado</span>
+            </div>
+            <div class="card-speakers">12,000-18,000 hablantes</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Huave</h3>
+            <div class="card-native">Ikoots - "Nosotros" o "Nuestra gente"</div>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Oaxaca - Istmo de Tehuantepec (San Mateo del Mar, San Dionisio del Mar, San Francisco del Mar, Santa María del Mar)
+            </div>
+            <p class="card-description">
+              El huave es otra lengua aislada sin parentesco con otras familias lingüísticas mexicanas. 
+              Los huaves son tradicionalmente pescadores y recolectores de moluscos en las lagunas costeras, 
+              con una cultura material y espiritual íntimamente ligada al mar.
+            </p>
+            <p class="card-description">
+              <strong>Crisis ambiental y lingüística:</strong> Las lagunas están severamente contaminadas 
+              por descargas industriales y agroquímicos. La pesca artesanal ya no es viable económicamente. 
+              Cuando desaparece el modo de vida tradicional, se pierde el contexto donde la lengua era funcional.
+            </p>
+            <p class="card-description">
+              <strong>Léxico especializado:</strong> Cientos de términos para especies marinas, técnicas 
+              de pesca, condiciones climáticas y marítimas, ciclos lunares y su relación con la pesca. 
+              Este conocimiento etnobiológico, acumulado durante milenios, se está perdiendo.
+            </p>
+            <div class="card-features">
+              <h4>Amenazas Principales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Discriminación de zapotecos y mestizos</li>
+                <li><i class="fas fa-check"></i> Contaminación de lagunas</li>
+                <li><i class="fas fa-check"></i> Migración juvenil hacia maquiladoras</li>
+              </ul>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 1rem;">
+              Actualizado Sep 2025
+            </p>
+            <div class="card-actions">
+              <a href="#" class="btn-learn">Explorar Perfil <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ixcateco -->
+        <div class="language-card" id="ixcateco" data-region="oaxaca" data-endangerment="critico" data-speakers="175" data-name="Ixcateco">
+          <div class="card-image">
+            <img src="{css,js,images,assets}/ixcateco.jpg" alt="Ixcateco">
+            <div class="card-badge">
+              <span class="status-badge critical">Críticamente Amenazado</span>
+            </div>
+            <div class="card-speakers">150-200 hablantes</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Ixcateco</h3>
+            <div class="card-native">Xwja - "Nuestra lengua"</div>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Oaxaca - Santa María Ixcatlán (Cañada Oaxaqueña)
+            </div>
+            <p class="card-description">
+              El ixcateco, perteneciente a la familia oto-mangue, se habla únicamente en Santa María Ixcatlán. 
+              Con solo 150-200 hablantes, casi todos mayores de 50 años, el ixcateco está en situación 
+              demográfica tan crítica como el ayapaneco, pero sin atención mediática comparable.
+            </p>
+            <p class="card-description">
+              <strong>Transmisión interrumpida:</strong> La transmisión intergeneracional se interrumpió 
+              completamente hace tres décadas. Los niños de Ixcatlán comprenden pasivamente algo de ixcateco 
+              pero no pueden producir oraciones completas. En una o dos generaciones más, desaparecerá.
+            </p>
+            <p class="card-description">
+              <strong>Etnoconocimiento en peligro:</strong> Etnobotánica de la Cañada oaxaqueña, plantas 
+              medicinales y sus usos específicos, técnicas agrícolas de cañada, clasificación de ecosistemas 
+              locales. No existen documentos escritos ni transmisión oral activa.
+            </p>
+            <div class="card-features">
+              <h4>Desafíos:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Aislamiento geográfico extremo</li>
+                <li><i class="fas fa-check"></i> Abandono estatal crónico</li>
+                <li><i class="fas fa-check"></i> Programas de revitalización esporádicos</li>
+              </ul>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 1rem;">
+              Actualizado Oct 2025
+            </p>
+            <div class="card-actions">
+              <a href="#" class="btn-learn">Explorar Perfil <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kiliwa -->
+        <div class="language-card" id="kiliwa" data-region="baja-california" data-endangerment="critico" data-speakers="40" data-name="Kiliwa">
+          <div class="card-image">
+            <img src="{css,js,images,assets}/kiliwa.jpg" alt="Kiliwa">
+            <div class="card-badge">
+              <span class="status-badge critical">Críticamente Amenazado</span>
+            </div>
+            <div class="card-speakers">30-50 hablantes</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Kiliwa</h3>
+            <div class="card-native">Ko'lew - "Nuestra palabra"</div>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Baja California - Ensenada, cerca de Sierra de San Pedro Mártir
+            </div>
+            <p class="card-description">
+              El kiliwa pertenece a la familia yumano-cochimí y se habla en comunidades del municipio 
+              de Ensenada. Los kiliwa son uno de los pueblos indígenas más pequeños de México, con 
+              población total menor a 200 personas y solo 30-50 hablantes mayores de 60 años.
+            </p>
+            <p class="card-description">
+              <strong>Aislamiento y abandono:</strong> Las comunidades kiliwa carecen de servicios básicos 
+              adecuados, infraestructura educativa y oportunidades económicas. Los jóvenes migran masivamente 
+              hacia Tijuana o Estados Unidos, donde el kiliwa es completamente desconocido.
+            </p>
+            <p class="card-description">
+              <strong>Conocimiento único:</strong> Conocimiento de supervivencia en desierto extremo, 
+              clasificación de plantas y animales del ecosistema desértico, técnicas de obtención de agua 
+              en ambiente árido, astronomía práctica para navegación y calendarios.
+            </p>
+            <div class="card-features">
+              <h4>Situación Crítica:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Documentación escasa y fragmentaria</li>
+                <li><i class="fas fa-check"></i> Invisibilidad mediática total</li>
+                <li><i class="fas fa-check"></i> Podría extinguirse esta década</li>
+              </ul>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 1rem;">
+              Actualizado Oct 2025
+            </p>
+            <div class="card-actions">
+              <a href="#" class="btn-learn">Explorar Perfil <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zapoteco -->
+        <div class="language-card" id="zapoteco" data-region="oaxaca" data-endangerment="en-peligro" data-speakers="425000" data-name="Zapoteco">
+          <div class="card-image">
+            <img src="{css,js,images,assets}/zapoteco.jpg" alt="Zapoteco">
+            <div class="card-badge">
+              <span class="status-badge definitely">Definitivamente Amenazado</span>
+            </div>
+            <div class="card-speakers">350,000-500,000 hablantes</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Zapoteco</h3>
+            <div class="card-native">Diidxazá - "La palabra"</div>
+            <div class="card-location">
+              <i class="fas fa-map-marker-alt"></i>
+              Oaxaca - Valles Centrales, Istmo, Sierra Norte, Sierra Sur
+            </div>
+            <p class="card-description">
+              El zapoteco es un complejo dialectal de más de 50 variantes mutuamente ininteligibles. 
+              Con 350,000-500,000 hablantes, es la segunda lengua indígena de México. Sin embargo, 
+              esta fortaleza demográfica oculta una realidad compleja: muchas variantes individuales 
+              están en situación crítica.
+            </p>
+            <p class="card-description">
+              <strong>Diversidad en riesgo:</strong> Variantes relativamente vitales (Istmo, Valles Centrales, 
+              Sierra Norte) coexisten con variantes críticamente amenazadas (Chichicapan, Amatlán) que tienen 
+              menos de 50-100 hablantes fluidos. La fragmentación dificulta la acción colectiva.
+            </p>
+            <p class="card-description">
+              <strong>Conocimiento ancestral:</strong> Sistemas agrícolas de terrazas y milpa, conocimiento 
+              sobre maíz y sus múltiples variedades, medicina tradicional zapoteca, astronomía y calendarios 
+              ceremoniales, conocimiento sobre mezcal y agave.
+            </p>
+            <div class="card-features">
+              <h4>Desafíos Actuales:</h4>
+              <ul>
+                <li><i class="fas fa-check"></i> Urbanización mortífera para la lengua</li>
+                <li><i class="fas fa-check"></i> Fragmentación dialectal</li>
+                <li><i class="fas fa-check"></i> Falta de estandarización</li>
+              </ul>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 1rem;">
+              Actualizado Nov 2025
+            </p>
+            <div class="card-actions">
+              <a href="#" class="btn-learn">Explorar Perfil <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <div class="cta-icon">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <h2 class="cta-title">El Tiempo se Agota</h2>
+      <p class="cta-description">
+        Cada día que pasa sin esfuerzos de documentación, nos arriesgamos a perder para siempre 
+        conocimiento lingüístico y cultural irreemplazable. Estas lenguas representan miles de años 
+        de sabiduría humana, conocimiento ecológico tradicional y formas únicas de entender el mundo.
+      </p>
+      <div class="cta-buttons">
+        <a href="crisis.html" class="btn-primary">Apoyar la Preservación</a>
+        <a href="bibliografia.html" class="btn-secondary">Conocer Más</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <i class="fas fa-feather-alt"></i>
+        </div>
+        <h3>Voces Indígenas</h3>
+      </div>
+      <p class="footer-description">
+        Preservando el patrimonio lingüístico a través de documentación digital y 
+        compromiso comunitario. Un proyecto académico del Instituto Tecnológico de Oaxaca.
+      </p>
+      <div class="footer-links">
+        <a href="#">Investigación Académica</a>
+        <span>•</span>
+        <a href="#">Preservación Cultural</a>
+        <span>•</span>
+        <a href="#">Colaboración Comunitaria</a>
+      </div>
+      <div class="footer-copyright">
+        © 2025 Proyecto de Investigación Voces Indígenas. Todos los derechos reservados.
+        <br>
+        Almaraz Vásquez Alonso David 
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
